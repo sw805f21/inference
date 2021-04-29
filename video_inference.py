@@ -14,7 +14,7 @@ import time
 
 import re
 
-DETECT_HISTORY_THRESHOLD = 0.6
+DETECT_HISTORY_THRESHOLD = 0.50
 
 # Natural sorting. sorting for natural keys to sort checkpoints, since they are in the format "ckpt- + some_number"
 def atoi(text):
@@ -58,7 +58,7 @@ def detect_fn(image):
 
 category_index = label_map_util.create_category_index_from_labelmap('label_map.pbtxt')
 
-cap = cv2.VideoCapture('test.mp4')
+cap = cv2.VideoCapture('3378363.mp4')
 
 width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
